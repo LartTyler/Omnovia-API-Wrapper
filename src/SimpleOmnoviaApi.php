@@ -55,7 +55,7 @@
 				if (is_array($v))
 					$this->query[$k] = $this->generateXml($k, $v);
 
-			$ch = curl_init(parent::$baseUrl . $this->method);
+			$ch = curl_init(parent::getBaseUrl() . $this->method);
 
 			curl_setopt_array($ch, array(
 				CURLOPT_POST => true,
