@@ -10,7 +10,7 @@
 			return $this->companyId;
 		}
 
-		public function getHashPassword() {
+		public function getPassword() {
 			return md5($this->password);
 		}
 

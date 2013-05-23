@@ -1,7 +1,7 @@
 <?php
 	interface OmnoviaApi {
 		public function getCompanyId();
-		public function getHashPassword();
+		public function getPassword();
 		public function getBaseUrl();
 		public function prepare($method);
 		public function addParameter(/* Varargs */);
@@ -9,22 +9,23 @@
 	}
 
 	/*
+		Sample query code... delete on completion
 
-	$api->addParameter('eventInfo', array(
-		'events' => array(
-			'node' => 'registrant',
-			'values' => array(
-				array(
-					'eventID' => $eventId,
-					'registeredEventDate' => $eventDate . $eventTime
-				),
-				array(
-					'eventId' => $otherId,
-					'registeredEventDate' => $otherDate . $otherTime
+		$api->addParameter('eventInfo', array(
+			'events' => array(
+				'node' => 'registrant',
+				'values' => array(
+					array(
+						'eventID' => $eventId,
+						'registeredEventDate' => $eventDate . $eventTime
+					),
+					array(
+						'eventId' => $otherId,
+						'registeredEventDate' => $otherDate . $otherTime
+					)
 				)
 			)
-		)
-	));
+		));
 	*/
 ?>
 
