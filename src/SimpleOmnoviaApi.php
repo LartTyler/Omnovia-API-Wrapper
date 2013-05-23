@@ -6,7 +6,10 @@
 		private $method = null;
 
 		public function prepare($method) {
-			$this->query = array();
+			$this->query = array(
+				'companyID' => parent::getCompanyId(),
+				'md5pass' => parent::getPassword()
+			);
 			$this->method = $method;
 
 			return $this;
